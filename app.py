@@ -28,7 +28,7 @@ class Birth(Resource):
 		birthdate = args['birthdate']
 		datetime_object = datetime.strptime(birthdate, '%d-%m-%Y')
 		age = int(calculate_age(datetime_object))
-		return {"birthdate":datetime_object.strftime('%m-%d-%Y'),"age":age}
+		return {"birthdate":birthdate,"age":age}
 class Image(Resource):
 	def get(self):
 		return {"message":"Plese sent 'image' (POST method) to me."}
