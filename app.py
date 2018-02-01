@@ -14,7 +14,7 @@ def calculate_age(born):
 
 parser = reqparse.RequestParser()
 parser.add_argument('birthdate')
-parser.add_argument('image', required=True, type=FileStorage, location='files')
+parser.add_argument('image', type=FileStorage, location='files')
 
 class Home(Resource):
 	def get(self):
